@@ -20,7 +20,3 @@ public class PasswordApiConfig {
 
 
 
-//Validate your password following determined criteria
-
-
-
