@@ -28,55 +28,44 @@ IsValid("AbTp9!fok") // true
 
 ## 🔨 Como executar
 
+Ao iniciar a aplicação é exposta a URN `/v1/password/valida` utilizando o método HTTP POST.
 
-## 🖱 Como utilizar
+#### Via Swagger
 
-![AppRunning](https://user-images.githubusercontent.com/36551957/103487870-39f3df80-4de7-11eb-8200-65f72eafc5b3.gif)
+Após iniciar a aplicação o swagger estará disponível `http://localhost:8085/itau-password-challenge`.
 
-Ao iniciar a aplicação é exposta a URN `/v1/password/validate` utilizando o método HTTP POST.
+![swagger](https://user-images.githubusercontent.com/51891680/146826872-d378e76c-c8c4-4378-b917-3767cd2d2dbb.PNG)
 
-Para realizar a requisição você deve passar o seguinte body (formato: application/JSON):
-```
+Clicar em Try it out
+
+![swagger2](https://user-images.githubusercontent.com/51891680/146827242-0b660f39-550f-4416-96bf-afb7bb371e20.PNG)
+
+Executar o teste de password
+
+![swagger3](https://user-images.githubusercontent.com/51891680/146827294-97587b39-fa1e-4102-b0d0-58ee63de62b7.PNG)
+
+
+
+
+
+#### 💻 Via Term
+
+Utilizando o método HTTP POST realizar a requisição você deve passar o seguinte body (formato: application/JSON):
+
 {
 	"password":"your_password"
 }
-```
-
 cURL:
-```
+
 curl --request POST \
-  --url http://localhost:8085/v1/password/validate \
+  --url http://localhost:8085/v1/password/valida \
   --header 'Content-Type: application/json' \
   --data '{
-	"password":"asdfg!X1234"
+	"password":"AsbvcE2!34875"
 }'
-```
 
-#### Swagger
 
-Após iniciar a aplicação o swagger estará disponível no endpoint `http://localhost:8085/docs`.
 
-![Swagger](https://user-images.githubusercontent.com/36551957/103487960-d1f1c900-4de7-11eb-8d01-c34be09c40d0.png)
 
-## ⁉️ Como funciona
 
-![AppEnum](https://user-images.githubusercontent.com/36551957/103425680-c48fd100-4b92-11eb-9653-bf8b3f77e190.png)
-
-Todas as regras são definidas em um enum chamado `Criteria` e cada critério retorna sua implementação da interface `PasswordRules`, como ambos utilizam a mesma inferface é possível validar a senha dado n critérios. 
-
-Para que a validação seja feita passamos a senha e todas as regras que queremos aplicar:
-
-![AppExample](https://user-images.githubusercontent.com/36551957/103425773-762f0200-4b93-11eb-8361-0ed5de507fce.png)
-
-## 📐 Diagrama e Arquitetura
-
-![AppDiagram_Security](https://user-images.githubusercontent.com/36551957/103426090-9eb7fb80-4b95-11eb-85ec-d17ba7798632.png)
-
-Baseada no DDD e conceitos do Clean Architecture a arquitetura do projeto consiste em uma aplicação própria com sua regra de negócio isolada e abstraida por uma interface, assim possibilitando implementações de novos critérios e reduzindo o acoplamento.
-
-## 💻 Tecnologias e ferramentas utilizadas
-- [Java 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
-- [Java Spring Boot](https://spring.io/projects/spring-boot)
-- [REGEX](https://regexr.com)
-
-Made with 🖤 by Vinicius Lima
+Lucas Costa Campos Rodrigues
