@@ -1,4 +1,4 @@
-# 🔐Password Security
+# 🔐Password Challenge
 
 Uma API para validar o nível de segurança da senha fornecida pelo usuário. Será considerada uma senha válida aquela que seguir as regras abaixo.
 
