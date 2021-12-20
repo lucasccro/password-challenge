@@ -28,7 +28,7 @@ IsValid("AbTp9!fok") // true
 
 ## 🔨 Como executar
 
-Ao iniciar a aplicação é exposta a URN `/v1/password/valida` utilizando o método HTTP POST.
+Ao iniciar a aplicação é exposta a URN `/v1/password/valida` 
 
 #### Via Swagger
 
