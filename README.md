@@ -28,35 +28,12 @@ IsValid("AbTp9!fok") // true
 
 ## 🔨 Como executar
 
-![AppStartup](https://user-images.githubusercontent.com/36551957/103487868-37918580-4de7-11eb-972f-8fc53b0e301d.gif)
 
-### Via Gradle
-- #### No Windows
-    Na pasta raiz do projeto, utilize o comando `gradlew bootRun`. A aplicação irá expor o serviço na porta `8085`. Caso tenha problema para execução, ainda na pasta raiz do projeto utilize o comando `gradlew.bat`, e então execute o comando anterior novamente.
-
-- #### No Linux
-    Na pasta raiz do projeto, utilize o comando `./gradlew bootRun`. A aplicação irá expor o serviço na porta `8085`.
-Caso tenha problema de permissionamento para execução, ainda na pasta raiz do projeto utilize o comando `chmod +x gradlew`, e então execute o comando anterior novamente.
-
-### Via Docker
-- #### Preparando aplicação
-    - #### No Windows
-        Na pasta raiz do projeto, utilize o comando `gradlew clean build`.
-
-    - #### No Linux
-        Na pasta raiz do projeto, utilize o comando `./gradlew clean build`.
-        Caso tenha problema de permissionamento para execução, ainda na pasta raiz do projeto utilize o comando `chmod +x gradlew`, e então execute o comando anterior novamente.
-
-- #### Buildando imagem
-    Para realizar o build da imagem utilize o comando `docker build -t password-security .`
-
-- #### Executando imagem
-    Para executar a imagem utilize o comando `docker run -p 8085:8085 password-security`, a partir deste momento a aplicação estará disponível em `http://localhost:8085/`. Para verificar os endpoints disponíveis utilize o [Swagger](#Swagger) da aplicação. 
 ## 🖱 Como utilizar
 
 ![AppRunning](https://user-images.githubusercontent.com/36551957/103487870-39f3df80-4de7-11eb-8200-65f72eafc5b3.gif)
 
-O seu uso é bem simples, ao iniciar a aplicação é exposta a URN `/v1/password/validate` utilizando o método HTTP POST.
+Ao iniciar a aplicação é exposta a URN `/v1/password/validate` utilizando o método HTTP POST.
 
 Para realizar a requisição você deve passar o seguinte body (formato: application/JSON):
 ```
