@@ -25,12 +25,6 @@ IsValid("AbTp9 fok") // false
 IsValid("AbTp9!fok") // true
 ```
 
-## Requisitos
-
-[SDK Java 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
-
-#### Links úteis
-- [Como setar o JAVA_HOME no Windows](https://confluence.atlassian.com/confbr1/configurando-a-variavel-java_home-no-windows-933709538.html)
 
 ## 🔨 Como executar
 
