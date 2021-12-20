@@ -53,9 +53,11 @@ Executar o teste de password
 Utilizando o método HTTP POST realizar a requisição você deve passar o seguinte body (formato: application/JSON):
 
 
+
 {
 	"password":"your_password"
 }
+
 
 cURL:
 
